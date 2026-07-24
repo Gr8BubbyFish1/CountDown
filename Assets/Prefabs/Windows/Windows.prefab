@@ -149,8 +149,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289901234
-  m_fontColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    rgba: 4290295992
+  m_fontColor: {r: 0.72199994, g: 0.72199994, b: 0.72199994, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1048,8 +1048,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289901234
-  m_fontColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    rgba: 4290295992
+  m_fontColor: {r: 0.72199994, g: 0.72199994, b: 0.72199994, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1322,8 +1322,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289901234
-  m_fontColor: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    rgba: 4290295992
+  m_fontColor: {r: 0.72199994, g: 0.72199994, b: 0.72199994, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1544,19 +1544,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3995732396510063807, guid: 0d6a3573c3341eb4ca287d7982c8a619, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.7
+      value: 0.72199994
       objectReference: {fileID: 0}
     - target: {fileID: 3995732396510063807, guid: 0d6a3573c3341eb4ca287d7982c8a619, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.7
+      value: 0.72199994
       objectReference: {fileID: 0}
     - target: {fileID: 3995732396510063807, guid: 0d6a3573c3341eb4ca287d7982c8a619, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.7
+      value: 0.72199994
       objectReference: {fileID: 0}
     - target: {fileID: 3995732396510063807, guid: 0d6a3573c3341eb4ca287d7982c8a619, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4289901234
+      value: 4290295992
       objectReference: {fileID: 0}
     - target: {fileID: 4422564889780646096, guid: 0d6a3573c3341eb4ca287d7982c8a619, type: 3}
       propertyPath: m_ConstrainProportionsScale

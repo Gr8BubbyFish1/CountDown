@@ -1162,6 +1162,54 @@ PrefabInstance:
       propertyPath: drapes
       value: 
       objectReference: {fileID: 83200736}
+    - target: {fileID: 2231211393496401153, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211393496401153, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211393496401153, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231211393496401153, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290295992
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665589257356852222, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665589257356852222, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665589257356852222, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2665589257356852222, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290295992
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502924508301262581, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502924508301262581, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502924508301262581, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502924508301262581, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290295992
+      objectReference: {fileID: 0}
     - target: {fileID: 5710160948131144237, guid: 995ac82afb46f12498f82df616079921, type: 3}
       propertyPath: m_Name
       value: Windows
@@ -1254,6 +1302,22 @@ PrefabInstance:
       propertyPath: drapes
       value: 
       objectReference: {fileID: 994652392}
+    - target: {fileID: 9116828144891428967, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116828144891428967, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116828144891428967, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.72199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116828144891428967, guid: 995ac82afb46f12498f82df616079921, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290295992
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
