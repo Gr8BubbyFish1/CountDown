@@ -5,6 +5,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private RectTransform front;
     public float startTime;
     private float currentTime;
+    private bool timeUp;
     
     private void Start()
     {
@@ -16,12 +17,13 @@ public class Timer : MonoBehaviour
         if (currentTime > 0)
         {
             currentTime -= Time.deltaTime;
-            float newScale = Mathf.Lerp(front.localScale.x,
+            float newScale = Mathf.Lerp(front.localScale.y,
                 Mathf.Clamp01(currentTime / startTime), Time.deltaTime);
-            front.localScale = new Vector2(newScale, 1);
+            front.localScale = new Vector2(1, newScale);
         }
-        else
+        else if(!timeUp)
         {
+            timeUp = true;
             TimesUpAction();
         }
     }

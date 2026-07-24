@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +100,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -143,12 +143,12 @@ TextureImporter:
       name: TopLeftCurtains_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 664
-        width: 232
-        height: 582
+        x: 0
+        y: 0
+        width: 1280
+        height: 1280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -165,12 +165,12 @@ TextureImporter:
       name: TopLeftCurtains_1
       rect:
         serializedVersion: 2
-        x: 309
-        y: 654
-        width: 217
-        height: 592
+        x: 1280
+        y: 0
+        width: 1280
+        height: 1280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,12 +187,12 @@ TextureImporter:
       name: TopLeftCurtains_2
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 664
-        width: 247
-        height: 582
+        x: 2560
+        y: 0
+        width: 1280
+        height: 1280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,12 +209,12 @@ TextureImporter:
       name: TopLeftCurtains_3
       rect:
         serializedVersion: 2
-        x: 1589
-        y: 654
-        width: 227
-        height: 592
+        x: 3840
+        y: 0
+        width: 1280
+        height: 1280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: TopLeftCurtains_4
       rect:
         serializedVersion: 2
-        x: 2609
-        y: 664
-        width: 247
-        height: 582
+        x: 5120
+        y: 0
+        width: 1280
+        height: 1280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -249,121 +249,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: TopLeftCurtains_5
-      rect:
-        serializedVersion: 2
-        x: 2869
-        y: 654
-        width: 227
-        height: 592
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 012075a4fd0a731b0800000000000000
-      internalID: -5676891924391853552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopLeftCurtains_6
-      rect:
-        serializedVersion: 2
-        x: 3889
-        y: 659
-        width: 247
-        height: 587
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80462fa6a3745ac70800000000000000
-      internalID: 8981663348088267784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopLeftCurtains_7
-      rect:
-        serializedVersion: 2
-        x: 4144
-        y: 654
-        width: 232
-        height: 592
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a381e51c5553f5a0800000000000000
-      internalID: -6488748784118299738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopLeftCurtains_8
-      rect:
-        serializedVersion: 2
-        x: 5204
-        y: 659
-        width: 212
-        height: 587
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 136982214da49dd50800000000000000
-      internalID: 6762518590171682353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopLeftCurtains_9
-      rect:
-        serializedVersion: 2
-        x: 5424
-        y: 669
-        width: 212
-        height: 577
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a87c1c0d6cd9ad1c0800000000000000
-      internalID: -4478093402235091062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c1b73f2dac7d8684e81ddcab5462fb11
     internalID: 0
     vertices: []
     indices: 
@@ -371,18 +261,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":1280.0,"y":1280.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       TopLeftCurtains_0: -4852030723317208626
       TopLeftCurtains_1: -499203607495064901
       TopLeftCurtains_2: 5732837097388257510
       TopLeftCurtains_3: -1731688804425628720
       TopLeftCurtains_4: -1360698375403733142
-      TopLeftCurtains_5: -5676891924391853552
-      TopLeftCurtains_6: 8981663348088267784
-      TopLeftCurtains_7: -6488748784118299738
-      TopLeftCurtains_8: 6762518590171682353
-      TopLeftCurtains_9: -4478093402235091062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

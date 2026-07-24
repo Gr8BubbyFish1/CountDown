@@ -14,6 +14,8 @@ public class PasswordWindows : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI backText;
     [SerializeField] private TextMeshProUGUI frontText;
+    [SerializeField] private String animationName;
+    [SerializeField] private GameObject textContainer;
     
     public bool done;
     public Animator drapes;
@@ -44,7 +46,8 @@ public class PasswordWindows : MonoBehaviour
                 if (currentIndex >= passwordLength)
                 {
                     done = true;
-                    drapes.Play("TestDrapesAnimationClip");
+                    textContainer.SetActive(false);
+                    drapes.Play(animationName);
                     //Debug.Log("Complete");
                 }
             }
