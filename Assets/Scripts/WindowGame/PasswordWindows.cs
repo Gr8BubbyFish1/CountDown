@@ -9,15 +9,15 @@ using Random = UnityEngine.Random;
 public class PasswordWindows : MonoBehaviour
 {
     private int passwordLength;
-    public String password;
-    public TextMeshProUGUI backText;
-    public TextMeshProUGUI frontText;
-    public bool done;
-
-    public Animator drapes;
-
+    private String password;
     private int currentIndex;
 
+    [SerializeField] private TextMeshProUGUI backText;
+    [SerializeField] private TextMeshProUGUI frontText;
+    
+    public bool done;
+    public Animator drapes;
+    
     void OnEnable()
     {
         Keyboard.current.onTextInput += OnTextInput;

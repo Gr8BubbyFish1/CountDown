@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WindowManager : MonoBehaviour
 {
-    public PasswordWindows[] windows;
+    [SerializeField] private PasswordWindows[] windows;
     public int passwordLength;
     private bool winWindows;
 
