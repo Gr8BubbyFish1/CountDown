@@ -337,10 +337,10 @@ MonoBehaviour:
   bloodBagPrefab:
   - {fileID: 1914846632193670191, guid: 85d47575b8eff29499db3243e2af2b0c, type: 3}
   - {fileID: 9130395551708142373, guid: b1dd64b9465610f479cf6218f06e3ec1, type: 3}
-  - {fileID: 2768725862465053689, guid: 28646b738dab7b54188cc6f8af7b86c5, type: 3}
   - {fileID: 2835490420692935854, guid: b4dc517d96a584540a12912d1db3e3a4, type: 3}
+  - {fileID: 2768725862465053689, guid: 28646b738dab7b54188cc6f8af7b86c5, type: 3}
   bagSpeed: 8
-  totalServings: 8
+  totalServings: 15
 --- !u!4 &282410484
 Transform:
   m_ObjectHideFlags: 0
