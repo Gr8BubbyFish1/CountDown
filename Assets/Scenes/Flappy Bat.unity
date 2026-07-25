@@ -993,6 +993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SideBars
       objectReference: {fileID: 0}
+    - target: {fileID: 6657308946536841957, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
