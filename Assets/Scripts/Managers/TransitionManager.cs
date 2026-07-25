@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -8,10 +9,13 @@ public class TransitionManager : MonoBehaviour
     
     [SerializeField] private PlayableDirector chompUp;
     [SerializeField] private PlayableDirector chompDown;
+    [SerializeField] private TextMeshProUGUI splashTitle;
+    public String splashTitleText;
 
     private void Start()
     {
         StaticManager.transitionManager = this;
+        splashTitle.text = splashTitleText;
 
         if (StaticManager.skipNextIntro)
         {
@@ -36,7 +40,7 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator OpenTransition()
     {
         StaticManager.transitionPlaying = true;
-
+        
         chompUp.Play();
         while (chompUp.time < chompUp.duration)
             yield return null;
@@ -49,10 +53,11 @@ public class TransitionManager : MonoBehaviour
         StaticManager.transitionPlaying = true;
 
         chompDown.Play();
-        while (chompDown.time < chompUp.duration)
+        while (chompDown.time < chompDown.duration)
             yield return null;
         
         StaticManager.transitionPlaying = false;
+        Debug.Log("2");
         StaticManager.GoToScene(goToSceneName);
     }
 

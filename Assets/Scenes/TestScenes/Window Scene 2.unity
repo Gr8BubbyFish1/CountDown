@@ -1100,18 +1100,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1674682712832898722, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
-      propertyPath: m_Name
-      value: ChompDown
+    - target: {fileID: 1839171792909526237, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
+      propertyPath: splashTitleText
+      value: Close the blinds
       objectReference: {fileID: 0}
-    - target: {fileID: 1839171792909526237, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
-      propertyPath: chompUp
-      value: 
-      objectReference: {fileID: 2614570805889975697}
-    - target: {fileID: 1839171792909526237, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
-      propertyPath: chompDown
-      value: 
-      objectReference: {fileID: 2614570805889975696}
     - target: {fileID: 4812904544581171512, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: m_Name
       value: ChompTransitions
@@ -1196,10 +1188,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6148746038482465522, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
-      propertyPath: m_Name
-      value: ChompUp
-      objectReference: {fileID: 0}
     - target: {fileID: 8619413993385131753, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1209,16 +1197,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
---- !u!320 &2614570805889975696 stripped
-PlayableDirector:
-  m_CorrespondingSourceObject: {fileID: 2654535263326699167, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
-  m_PrefabInstance: {fileID: 2614570805889975695}
-  m_PrefabAsset: {fileID: 0}
---- !u!320 &2614570805889975697 stripped
-PlayableDirector:
-  m_CorrespondingSourceObject: {fileID: 3470413207319271289, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
-  m_PrefabInstance: {fileID: 2614570805889975695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3509437832838742459
 PrefabInstance:
   m_ObjectHideFlags: 0

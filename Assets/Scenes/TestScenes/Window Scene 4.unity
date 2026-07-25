@@ -1112,6 +1112,10 @@ PrefabInstance:
       propertyPath: chompDown
       value: 
       objectReference: {fileID: 2614570805889975696}
+    - target: {fileID: 1839171792909526237, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
+      propertyPath: splashTitleText
+      value: Close the blinds
+      objectReference: {fileID: 0}
     - target: {fileID: 4812904544581171512, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: m_Name
       value: ChompTransitions

@@ -66,8 +66,22 @@ public static class StaticManager
         miniGameList.Add("Window Scene 3");
         miniGameList.Add("Window Scene 4");
         miniGameList.Add("Window Scene 5");
+
+        if (SceneManager.GetActiveScene().name.Equals("Title Screen"))
+        {
+            skipNextIntro = true;
+        }
+        else // we are debugging a scene
+        {
+            Debug.Log("0");
+            totalGamesPlayed = 0; 
+            roundNumber = 1;
+            lives = 3; 
+            totalRoundsPlayed = 0;
+            notificationNote = "";
+            GeneratePlayList();
+        }
         
-        skipNextIntro = true;
     }
 
     public static void RestartGame()
@@ -110,6 +124,7 @@ public static class StaticManager
             try
             {
                 transitionManager.CloseScene("Between Game Screen");
+                Debug.Log("1");
             }
             catch
             {
@@ -150,6 +165,7 @@ public static class StaticManager
     
     public static void GoToScene(String sceneName)
     {
+        Debug.Log("3");
         SceneManager.LoadScene(sceneName);
     }
     
