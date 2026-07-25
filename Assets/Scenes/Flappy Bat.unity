@@ -698,6 +698,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1212993328571382288, guid: 2744281340105d541bddcfeaeb93d597, type: 3}
+      propertyPath: wingUp
+      value: 
+      objectReference: {fileID: 7791384199093869478, guid: 2125df8b27b6a624cb57e4a432a2343f, type: 3}
+    - target: {fileID: 1212993328571382288, guid: 2744281340105d541bddcfeaeb93d597, type: 3}
+      propertyPath: wingDown
+      value: 
+      objectReference: {fileID: 2021432993829963659, guid: 32f51198c1fd4ca4784ac1f8558f314e, type: 3}
     - target: {fileID: 2950839588145733472, guid: 2744281340105d541bddcfeaeb93d597, type: 3}
       propertyPath: m_Name
       value: bat
