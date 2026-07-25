@@ -21,7 +21,14 @@ public class WindowManager : MonoBehaviour
         if (windows[0].done && windows[1].done && windows[2].done && windows[3].done && !winWindows)
         {
             winWindows = true;
-            Debug.Log("Game Complete");
+            //Debug.Log("Game Complete");
+            StaticManager.EndMiniGame();
+        }
+
+        if (StaticManager.hasTimeRunOut())
+        {
+            StaticManager.removeLife();
+            StaticManager.EndMiniGame();
         }
     }
 }
