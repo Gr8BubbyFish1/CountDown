@@ -10,7 +10,7 @@ public class ObstacleDestroyer : MonoBehaviour
     private bool hitObstacle = false;
     void Update()
     {
-        if (!isScored && transform.position.x < -7.8f && obstacleController && hitObstacle == false) //this transform position is the player's position. when the player passes it, they score.
+        if (!isScored && transform.position.x < -5.7f && obstacleController && hitObstacle == false) //this transform position is the player's position. when the player passes it, they score.
         {
             obstacleController.Score();
             isScored = true;
@@ -25,7 +25,11 @@ public class ObstacleDestroyer : MonoBehaviour
     {
         hitObstacle = true;
         if (pairedObstacle)
-           pairedObstacle.hitObstacle = true;
-        Debug.Log ("You hit the obstacle!");
+        {
+            pairedObstacle.hitObstacle = true;
+            pairedObstacle.obstacleController.Hit();
+        }
+        else
+            obstacleController.Hit();
     }
 }
