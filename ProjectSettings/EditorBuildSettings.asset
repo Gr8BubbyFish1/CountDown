@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/A Different Screen.unity
     guid: f2f030f7ed6854249ad0c2f4c2569fe7
+  - enabled: 1
+    path: Assets/Scenes/WindowScene.unity
+    guid: f4823e1161100a6488c18e1e2efa62da
+  - enabled: 1
+    path: Assets/Scenes/RiceScene.unity
+    guid: 8f53b58715403da41aee71d38338b8e0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
