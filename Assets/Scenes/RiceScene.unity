@@ -701,6 +701,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8619413993385131753, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 245000398}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1905,6 +1909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SideBars
       objectReference: {fileID: 0}
+    - target: {fileID: 8534242514109479059, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 245000398}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
