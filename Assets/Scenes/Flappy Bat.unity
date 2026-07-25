@@ -487,8 +487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   player: {fileID: 976545974028765784}
   obstacle: {fileID: 3694227140549881680, guid: 31f44f0d6145db84f954daef1d9fcc9f, type: 3}
-  verticalGap: 3
-  horizontalGap: 5
+  verticalGap: 4
+  horizontalGap: 6
   speed: 5
   goalScore: 15
   ScreenTop: 5.5
@@ -896,6 +896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8619413993385131753, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 366114895}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -997,6 +1001,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8534242514109479059, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 366114895}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
