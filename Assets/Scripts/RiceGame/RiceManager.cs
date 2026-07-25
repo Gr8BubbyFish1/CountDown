@@ -91,7 +91,12 @@ public class RiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (StaticManager.hasTimeRunOut())
+        {
+            Debug.Log("Time up");
+            StaticManager.removeLife();
+            StaticManager.EndMiniGame();
+        }
     }
 
     private int GetRandomNormal(int mean, float std, int min, int max)
@@ -136,13 +141,17 @@ public class RiceManager : MonoBehaviour
     {
         if (guess == correctCount)
         {
-            Debug.Log("Correct!");
+            //Debug.Log("Correct!");
             // Win
+            
+            StaticManager.EndMiniGame();
         }
         else
         {
-            Debug.Log("Wrong!");
+            //Debug.Log("Wrong!");
             // Lose
+            StaticManager.removeLife();
+            StaticManager.EndMiniGame();
         }
     }
 
