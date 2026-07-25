@@ -21,6 +21,8 @@ public class RiceManager : MonoBehaviour
     private List<int> answerChoices = new();
     [SerializeField] private AnswerButton[] answerButtons;
 
+    private bool loseRice = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -91,8 +93,9 @@ public class RiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (StaticManager.hasTimeRunOut())
+        if (StaticManager.hasTimeRunOut() && !loseRice)
         {
+            loseRice = true;
             Debug.Log("Time up");
             StaticManager.removeLife();
             StaticManager.EndMiniGame();
