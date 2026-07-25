@@ -62,7 +62,7 @@ public static class StaticManager
         miniGameList = new List<String>(5);//update with # of minigames
         //Add minigames here
         miniGameList.Add("RiceScene");
-        miniGameList.Add("Window Scene 2");
+        miniGameList.Add("Flappy Bat");
         miniGameList.Add("Window Scene 3");
         miniGameList.Add("Window Scene 4");
         miniGameList.Add("Window Scene 5");

@@ -4,7 +4,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private RectTransform front;
     public float startTime;
-    private float currentTime;
+    public float currentTime;
     private bool timeUp;
     
     private void Start()

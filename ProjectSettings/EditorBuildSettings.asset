@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RiceScene.unity
     guid: 8f53b58715403da41aee71d38338b8e0
+  - enabled: 1
+    path: Assets/Scenes/Flappy Bat.unity
+    guid: f5c76c195cf8f6543ac5b0a879bf5d94
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
