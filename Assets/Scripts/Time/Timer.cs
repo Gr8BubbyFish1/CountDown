@@ -14,22 +14,29 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (currentTime > 0)
+        if (!StaticManager.transitionPlaying)
         {
-            currentTime -= Time.deltaTime;
-            float newScale = Mathf.Lerp(front.localScale.y,
-                Mathf.Clamp01(currentTime / startTime), Time.deltaTime);
-            front.localScale = new Vector2(1, newScale);
-        }
-        else if(!timeUp)
-        {
-            timeUp = true;
-            TimesUpAction();
+            if (currentTime > 0)
+            {
+                currentTime -= Time.deltaTime;
+                float newScale = Mathf.Lerp(front.localScale.y,
+                    Mathf.Clamp01(currentTime / startTime), Time.deltaTime);
+                front.localScale = new Vector2(1, newScale);
+            }
+            else if (!timeUp)
+            {
+                timeUp = true;
+            }
         }
     }
 
-    public void TimesUpAction()
+    public float getCurrentTime()
     {
-        Debug.Log("Times up!");
+        return currentTime;
+    }
+
+    public bool hasTimeRunOut()
+    {
+        return timeUp;
     }
 }
