@@ -6,6 +6,7 @@ public class WindowManager : MonoBehaviour
     [SerializeField] private PasswordWindows[] windows;
     public int passwordLength;
     private bool winWindows;
+    private bool loseWindows;
 
     private void Start()
     {
@@ -25,8 +26,9 @@ public class WindowManager : MonoBehaviour
             StaticManager.EndMiniGame();
         }
 
-        if (StaticManager.hasTimeRunOut())
+        if (StaticManager.hasTimeRunOut() && !loseWindows)
         {
+            loseWindows = true;
             StaticManager.removeLife();
             StaticManager.EndMiniGame();
         }

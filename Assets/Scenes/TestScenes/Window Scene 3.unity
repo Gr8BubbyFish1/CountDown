@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7474709885926145177, guid: 995ac82afb46f12498f82df616079921, type: 3}
       propertyPath: passwordLength
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8171281048429595266, guid: 995ac82afb46f12498f82df616079921, type: 3}
       propertyPath: drapes

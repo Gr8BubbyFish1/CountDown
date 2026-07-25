@@ -18,6 +18,7 @@ public static class StaticManager
     
     //Flags
     public static bool transitionPlaying;
+    public static bool skipNextIntro;
     
     //Managers
     public static TransitionManager transitionManager;
@@ -33,8 +34,15 @@ public static class StaticManager
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void InitializeGame()
     {
+        miniGameList = new List<String>(5);//update with # of minigames
         //Add minigames here
-        miniGameList.Add("Window Scene");
+        miniGameList.Add("Window Scene 1");
+        miniGameList.Add("Window Scene 2");
+        miniGameList.Add("Window Scene 3");
+        miniGameList.Add("Window Scene 4");
+        miniGameList.Add("Window Scene 5");
+        
+        skipNextIntro = true;
     }
 
     public static void RestartGame()
@@ -46,7 +54,7 @@ public static class StaticManager
         notificationNote = "";
         
         GeneratePlayList();
-        GoToScene("Between Game Screen");
+        transitionManager.CloseScene("Between Game Screen");
     }
 
     public static String GetCurrentSceneName()
@@ -56,31 +64,35 @@ public static class StaticManager
 
     public static void EndMiniGame()
     {
-        if (lives <= 0)
+        if (lives > 0)
         {
-            CompletelyEndGame();
-        }
-        
-        roundNumber++;
-        totalGamesPlayed++;
-        if (roundNumber == 6)
-        {
-            notificationNote = "Challenge Increasing...";
-            roundNumber = 1;
+
+            roundNumber++;
+            totalGamesPlayed++;
+            if (roundNumber == 6)
+            {
+                totalRoundsPlayed++;
+                notificationNote = "Challenge Increasing...";
+                roundNumber = 1;
+            }
+            else
+            {
+                notificationNote = "";
+            }
+
+            try
+            {
+                transitionManager.CloseScene("Between Game Screen");
+            }
+            catch
+            {
+                GoToScene("Between Game Screen");
+                Debug.Log("No transition detected");
+            }
         }
         else
         {
-            notificationNote = "";
-        }
-        
-        try
-        {
-            transitionManager.CloseScene("Between Game Screen");
-        }
-        catch
-        {
-            GoToScene("Between Game Screen");
-            Debug.Log("No transition detected");
+            CompletelyEndGame();
         }
     }
 
@@ -88,12 +100,17 @@ public static class StaticManager
     {
         SceneManager.LoadScene(sceneName);
     }
+    
+    public static void GoToScene(String sceneName, bool skipIntro)
+    {
+        skipNextIntro = skipIntro;
+        SceneManager.LoadScene(sceneName);
+    }
 
     public static void StartNextGame()
     {
         if (roundNumber == 1)
         {
-            totalRoundsPlayed++;
             GeneratePlayList();
             GoToScene(miniGameQueue[roundNumber-1]);
         }
@@ -105,7 +122,7 @@ public static class StaticManager
 
     public static void CompletelyEndGame()
     {
-        SceneManager.LoadScene("Title Screen");
+        transitionManager.CloseScene("Title Screen");
     }
     
     public static bool hasTimeRunOut()

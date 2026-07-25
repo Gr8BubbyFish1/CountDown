@@ -12,7 +12,15 @@ public class TransitionManager : MonoBehaviour
     private void Start()
     {
         StaticManager.transitionManager = this;
-        OpenScene();
+
+        if (StaticManager.skipNextIntro)
+        {
+            StaticManager.skipNextIntro = false;
+        }
+        else
+        {
+            OpenScene();
+        }
     }
 
     public void OpenScene()
