@@ -1083,6 +1083,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "FlappyBat",
+            "id": "cbba745c-a4d1-48ae-9523-bdd8cbcdf080",
+            "actions": [
+                {
+                    "name": "Flap",
+                    "type": "Button",
+                    "id": "2b3406d8-b754-49c0-9547-6d3e35bed317",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "92883bd5-7168-42b9-9262-97fb1d7f11c4",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7f5f65d-a687-42d9-89fd-f0c805178ead",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
