@@ -8,6 +8,13 @@ public class WindowManager : MonoBehaviour
     private bool winWindows;
     private bool loseWindows;
 
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void Start()
     {
         foreach (PasswordWindows window in windows)
@@ -23,6 +30,7 @@ public class WindowManager : MonoBehaviour
         {
             winWindows = true;
             //Debug.Log("Game Complete");
+            audioManager.PlaySFX(audioManager.winSFX);
             StaticManager.EndMiniGame();
         }
 
