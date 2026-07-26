@@ -10,6 +10,8 @@ public class WindowManager : MonoBehaviour
 
     private void Start()
     {
+        //StaticManager.setTimer(10);
+        //Debug.Log("TimerFireA");
         foreach (PasswordWindows window in windows)
         {
             window.setPasswordLength(passwordLength);
