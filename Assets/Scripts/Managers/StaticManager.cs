@@ -63,9 +63,9 @@ public static class StaticManager
         //Add minigames here
         miniGameList.Add("RiceScene");
         miniGameList.Add("Flappy Bat");
-        miniGameList.Add("Window Scene 3");
-        miniGameList.Add("Window Scene 4");
-        miniGameList.Add("Window Scene 5");
+        miniGameList.Add("Chase Scene");
+        miniGameList.Add("Window Scene");
+        miniGameList.Add("Tapper microgame");
 
         if (SceneManager.GetActiveScene().name.Equals("Title Screen"))
         {

@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,6 +11,7 @@ public class HumanRun : MonoBehaviour
     [SerializeField] private float minDisFromPlayer;
     [SerializeField] private float minDisFromSelf;
     [SerializeField] private SpriteRenderer skin;
+    [SerializeField] private GameObject blood;
 
     public float maxHealth;
     public float health;
@@ -20,6 +20,7 @@ public class HumanRun : MonoBehaviour
     public float speed = 5f;
 
     private Vector2 target;
+    private bool winChase;
     
 
     void Start()
@@ -30,17 +31,28 @@ public class HumanRun : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, 
-            target,speed * Time.deltaTime);
+        if (health > 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, 
+                target,speed * Time.deltaTime);
         
-        Vector2 direction = (target - (Vector2)transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+            Vector2 direction = (target - (Vector2)transform.position).normalized;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
         
 
-        if (Vector2.Distance(transform.position, target) < 0.1f)
+            if (Vector2.Distance(transform.position, target) < 0.1f)
+            {
+                PickNewTarget();
+            }
+   
+        }
+        
+        if(health <= 0 && !winChase)
         {
-            PickNewTarget();
+            winChase = true;
+            player.GetComponent<PlayerManager>().setCanMove(false);
+            StaticManager.EndMiniGame();
         }
     }
 
@@ -64,12 +76,12 @@ public class HumanRun : MonoBehaviour
             PickNewTarget();
         }
     }
-
-    private void OnCollisionStay2D(Collision2D other)
+    
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            if (!invincible)
+            if (!invincible && health > 0)
                 StartCoroutine(takeDamage());
         }
     }
@@ -78,12 +90,12 @@ public class HumanRun : MonoBehaviour
     {
         invincible = true;
         health--;
+        Instantiate(blood, this.transform);
         Color skintone = skin.color;
-        float alpha = (health / maxHealth) * 100;
+        float alpha = health / maxHealth;
         skintone.a = alpha;
         skin.color = skintone;
         yield return new WaitForSeconds(invincibleTime);
         invincible = false;
-
     }
 }

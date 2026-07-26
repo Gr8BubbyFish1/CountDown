@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/A Different Screen.unity
     guid: f2f030f7ed6854249ad0c2f4c2569fe7
   - enabled: 1
-    path: Assets/Scenes/TestScenes/Window Scene 1.unity
+    path: Assets/Scenes/TestScenes/Window Scene.unity
     guid: 1d0f9922456c67d418244169000e5558
   - enabled: 1
     path: Assets/Scenes/TestScenes/Window Scene 2.unity
@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Flappy Bat.unity
     guid: f5c76c195cf8f6543ac5b0a879bf5d94
+  - enabled: 1
+    path: Assets/Scenes/Chase Scene.unity
+    guid: fb73e76b77da00445947883832eb45a6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
