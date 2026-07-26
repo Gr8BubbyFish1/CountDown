@@ -4,16 +4,20 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private RectTransform front;
     public float startTime;
-    public float currentTime;
+    public float currentTime = -1;
     private bool timeUp;
-    
-    private void Start()
-    {
-        currentTime = startTime;
-    }
+
+    private bool startFlag;
 
     private void Update()
     {
+        if (!startFlag)
+        {
+            //Debug.Log("TimerFireD");
+            startFlag = true;
+            currentTime = startTime;
+        }
+        
         if (!StaticManager.transitionPlaying)
         {
             if (currentTime > 0)
