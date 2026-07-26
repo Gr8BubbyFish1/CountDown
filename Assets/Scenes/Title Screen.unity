@@ -1072,7 +1072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &936466902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,8 +1128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 624.6072, y: -395.40698}
-  m_SizeDelta: {x: 639.1136, y: 258.6145}
+  m_AnchoredPosition: {x: 624.6072, y: -327.28}
+  m_SizeDelta: {x: 639.11, y: 394.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &959590579
 GameObject:
@@ -1413,17 +1413,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Luke Palios - Lead Developer, SFX
-
-    Joey Markowski - Developer, Art,
-    SFX
-
-    James Flores - Developer
-
-    Daniel Borhegyi - Developer
-
-    Gabi
-    Hall - Art'
+  m_text: "Luke Palios - Lead Developer, SFX\nJoey Markowski - Developer, Art, SFX\nJames
+    Flores - Developer\nDaniel Borhegyi - Developer\nGabi Hall - Art\n\nMusic by:
+    https://www.steven-obrien.net/\r\r\nOn Point - Steven O'Brien"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
