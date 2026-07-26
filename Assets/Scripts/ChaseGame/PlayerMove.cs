@@ -19,4 +19,9 @@ public class PlayerMove : MonoBehaviour
             transform.up = movement.normalized;
         }
     }
+
+    public void SetPlayerSpeed(float speed)
+    {
+        playerSpeed = speed;
+    }
 }

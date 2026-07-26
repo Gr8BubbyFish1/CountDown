@@ -409,7 +409,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 196647248666553324, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
       propertyPath: startTime
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1239473139634848307, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
       propertyPath: m_Pivot.x
@@ -1287,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7474709885926145177, guid: 995ac82afb46f12498f82df616079921, type: 3}
       propertyPath: passwordLength
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8171281048429595266, guid: 995ac82afb46f12498f82df616079921, type: 3}
       propertyPath: drapes
