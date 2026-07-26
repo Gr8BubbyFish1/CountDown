@@ -114,11 +114,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   BeltLocations:
-  - {x: 3.89, y: -3.04}
-  - {x: 3.18, y: -0.78}
   - {x: 2.13, y: 1.55}
+  - {x: 3.18, y: -0.78}
+  - {x: 3.89, y: -3.04}
   fillingSFX: {fileID: 8300000, guid: 7e7de0be5af32d2418f9f68bc3e5dc8c, type: 3}
   fullSFX: {fileID: 8300000, guid: 083855ef189428f4188dbb65fb692762, type: 3}
+  moveSprite: {fileID: 2781146570741306763, guid: 237a424d39ece69469fea8db885c0f33, type: 3}
+  stillSprite: {fileID: 8181413519261763328, guid: 191fce1cc7a798f48af55b2122c7a7df, type: 3}
 --- !u!82 &4683644328887058372
 AudioSource:
   m_ObjectHideFlags: 0
