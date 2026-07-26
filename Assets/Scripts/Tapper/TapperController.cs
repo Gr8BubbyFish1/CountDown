@@ -20,7 +20,9 @@ public class TapperController : MonoBehaviour
 
     [SerializeField] private float totalServings;
     // [SerializeField] private GameObject[] lane; // I don't think I ever use this? why is this here?
-    
+
+    private bool endTapper;
+
     [SerializeField] private TextMeshProUGUI ScoreText;
     private AudioManager audioManager;
 
@@ -31,6 +33,9 @@ public class TapperController : MonoBehaviour
 
     private void Start()
     {
+        endTapper = false;
+        DifficultySelect(StaticManager.totalRoundsPlayed);
+        
         List<Blood> bloodFeed = new List<Blood>();
         for (int i = 0; i < totalServings; i++)
         {
@@ -46,6 +51,9 @@ public class TapperController : MonoBehaviour
     {
         //This is terrible practice, but I have mangled this minigame's code enough to go back now. 
         ScoreText.text = $"Served:\n {totalServings - feedController.bloodFeed.Count}/{totalServings}";
+
+        if (StaticManager.hasTimeRunOut() && !endTapper)    
+            LoseLife(); 
     }
 
     public void ServeMug(Blood currentBelt, Blood? mug)
@@ -67,7 +75,8 @@ public class TapperController : MonoBehaviour
     }
 
     public void LoseLife()
-    { 
+    {
+        endTapper = true;
         StaticManager.removeLife();
         StaticManager.EndMiniGame();
         Debug.Log("Damn man you fucking suck");
@@ -76,7 +85,37 @@ public class TapperController : MonoBehaviour
     public void GameWon()
     {
         Debug.Log("congarts champ");
+        endTapper = true;
         audioManager.PlaySFX(audioManager.winSFX);
         StaticManager.EndMiniGame();
+    }
+
+    private void DifficultySelect(int difficulty)
+    {
+        switch (difficulty)
+        {
+            case 0:
+                totalServings = 8;
+                break;
+            case 1:
+                totalServings = 10;
+                break;
+            case 2:
+                totalServings = 14;
+                feedController.startingDelay = 2;
+                break;
+            case 3:
+                totalServings = 18;
+                feedController.startingDelay = 2;
+                break;
+            case 4:
+                totalServings = 20;
+                feedController.startingDelay = 1.5f;
+                break;
+            default:
+                totalServings = 20 + (difficulty - 5) * 5;
+                feedController.startingDelay = 1f;
+                break;
+        }
     }
 }

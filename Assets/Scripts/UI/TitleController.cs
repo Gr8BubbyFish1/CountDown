@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleController : MonoBehaviour
 {
+    [SerializeField] GameObject credits;
+    bool isCreditsActive = false;
     
     public void SendToScene(string sceneName)
     {
@@ -13,5 +15,16 @@ public class TitleController : MonoBehaviour
     public void StartGame()
     {
         StaticManager.RestartGame();
+    }
+
+    public void Credits()
+    {
+        isCreditsActive = !isCreditsActive;
+        credits.SetActive(isCreditsActive);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
