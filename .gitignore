@@ -112,3 +112,24 @@ InitTestScene*.unity*
 
 # .idea files (editor config)
 .idea
+Assets/Settings/Build Profiles/Web - Desktop - Release.asset
+Assets/Settings/Build Profiles/Web - Desktop - Release.asset.meta
+Build Outputs/Build/Build Outputs.data.unityweb
+Build Outputs/Build/Build Outputs.framework.js.unityweb
+Build Outputs/Build/Build Outputs.loader.js
+Build Outputs/Build/Build Outputs.wasm.unityweb
+Build Outputs/index.html
+Build Outputs/TemplateData/favicon.ico
+Build Outputs/TemplateData/fullscreen-button.png
+Build Outputs/TemplateData/MemoryProfiler.png
+Build Outputs/TemplateData/progress-bar-empty-dark.png
+Build Outputs/TemplateData/progress-bar-empty-light.png
+Build Outputs/TemplateData/progress-bar-full-dark.png
+Build Outputs/TemplateData/progress-bar-full-light.png
+Build Outputs/TemplateData/style.css
+Build Outputs/TemplateData/unity-logo-dark.png
+Build Outputs/TemplateData/unity-logo-light.png
+Build Outputs/TemplateData/unity-logo-title-footer.png
+Build Outputs/TemplateData/webmemd-icon.png
+Build Outputs/The Count's Days_BurstDebugInformation_DoNotShip/Data/Plugins/lib_burst_generated.txt
+Build Outputs/TheCountsDays.zip

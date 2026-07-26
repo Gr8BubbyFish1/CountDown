@@ -53,6 +53,7 @@ public class HumanRun : MonoBehaviour
         {
             winChase = true;
             player.GetComponent<PlayerManager>().setCanMove(false);
+            StaticManager.audioManager.PlaySFX(StaticManager.audioManager.winSFX);
             StaticManager.EndMiniGame();
         }
     }
