@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ccf52a0bd1745d549b969b0c89e5d8ea
+guid: 6053be973b347b843a05ee44ab2f7e63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6357886572545681007
-    second: Liquid Platelets_0
+      213: 4753537338028034238
+    second: gabi bg(1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Liquid Platelets_0
+      name: gabi bg(1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 55
+        width: 777
+        height: 777
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f66afc6f620cb3850800000000000000
-      internalID: 6357886572545681007
+      spriteID: eb887bb0605f7f140800000000000000
+      internalID: 4753537338028034238
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Liquid Platelets_0: 6357886572545681007
+      gabi bg(1)_0: 4753537338028034238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1039,7 +1039,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "Positive",
                     "id": "af6ce4bc-1d1d-451c-bfc8-db2b9fb03094",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
@@ -1050,7 +1050,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
+                    "name": "Negative",
                     "id": "ff4eed0c-3280-4956-8a24-571f268aeda6",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
