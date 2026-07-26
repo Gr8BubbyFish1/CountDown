@@ -19,6 +19,13 @@ public class TapperController : MonoBehaviour
 
     [SerializeField] private float totalServings;
     // [SerializeField] private GameObject[] lane; // I don't think I ever use this? why is this here?
+    
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -55,5 +62,6 @@ public class TapperController : MonoBehaviour
     public void GameWon()
     {
         Debug.Log("congarts champ");
+        audioManager.PlaySFX(audioManager.winSFX);
     }
 }

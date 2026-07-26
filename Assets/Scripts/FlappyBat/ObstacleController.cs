@@ -30,6 +30,13 @@ public class ObstacleController : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI scoreText;
     private bool gameEnding = false;
+    
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private Tuple<float, float> reachableBoundsHolder =  new Tuple<float, float>(5f, -5f);
     void Start()
@@ -113,6 +120,7 @@ public class ObstacleController : MonoBehaviour
         {
             Debug.Log($"YOU WIN!!!!");
             gameEnding = true;
+            audioManager.PlaySFX(audioManager.winSFX);
             StaticManager.EndMiniGame();
         }
     }

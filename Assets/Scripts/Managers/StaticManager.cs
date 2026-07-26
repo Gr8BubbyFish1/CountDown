@@ -49,6 +49,7 @@ public static class StaticManager
     public static TransitionManager transitionManager;
     public static SideBarsManager sideBarsManager;
     //public static BetweenGameManager betweenGameManager;
+    public static AudioManager audioManager;
     
     //Static Manager Only
     private static List<String> miniGameList;
@@ -63,7 +64,7 @@ public static class StaticManager
         //Add minigames here
         miniGameList.Add("RiceScene");
         miniGameList.Add("Flappy Bat");
-        miniGameList.Add("Window Scene 3");
+        miniGameList.Add("Tapper microgame");
         miniGameList.Add("Window Scene 4");
         miniGameList.Add("Window Scene 5");
 
@@ -155,6 +156,7 @@ public static class StaticManager
     {
         try
         {
+            audioManager.PlaySFX(audioManager.gameOver);
             transitionManager.CloseScene("Title Screen");
         }
         catch
@@ -198,6 +200,10 @@ public static class StaticManager
     public static void removeLife()
     {
         lives--;
+        if(lives != 0)
+        {
+            audioManager.PlaySFX(audioManager.loseSFX);
+        }
         sideBarsManager.UpdateSideBars();
     }
 
