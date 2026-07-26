@@ -2254,6 +2254,7 @@ MonoBehaviour:
   loseSFX: {fileID: 8300000, guid: a776e9776624943488f8c19db9c0a76f, type: 3}
   winSFX: {fileID: 8300000, guid: 9b2d848d800074b42aa67daa8001c9e5, type: 3}
   gameOver: {fileID: 8300000, guid: c6dd1aad1ba63054ead4806eb3abe974, type: 3}
+  speedUp: {fileID: 8300000, guid: 52d0c864616d70842aa535fe9b2cada2, type: 3}
 --- !u!4 &1600740598
 Transform:
   m_ObjectHideFlags: 0
