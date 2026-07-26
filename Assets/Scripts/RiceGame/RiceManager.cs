@@ -22,6 +22,12 @@ public class RiceManager : MonoBehaviour
     [SerializeField] private AnswerButton[] answerButtons;
 
     private bool loseRice = false;
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -146,7 +152,7 @@ public class RiceManager : MonoBehaviour
         {
             //Debug.Log("Correct!");
             // Win
-            
+            audioManager.PlaySFX(audioManager.winSFX);
             StaticManager.EndMiniGame();
         }
         else

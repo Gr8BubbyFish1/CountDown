@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Title Screen.unity
     guid: 473b260a012dd6b45ab9983258e4c0be
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/A Different Screen.unity
     guid: f2f030f7ed6854249ad0c2f4c2569fe7
   - enabled: 1
@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Flappy Bat.unity
     guid: f5c76c195cf8f6543ac5b0a879bf5d94
   - enabled: 1
-    path: Assets/Scenes/Chase Scene.unity
-    guid: fb73e76b77da00445947883832eb45a6
+    path: Assets/Scenes/Tapper microgame.unity
+    guid: aaa011897290e124e8792769621ef44d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
