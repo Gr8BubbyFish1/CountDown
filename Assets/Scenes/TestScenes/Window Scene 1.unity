@@ -407,9 +407,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 196647248666553324, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
-      propertyPath: startTime
-      value: 30
+    - target: {fileID: 619736844366369405, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 619736844366369405, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1239473139634848307, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
       propertyPath: m_Pivot.x
@@ -495,10 +499,74 @@ PrefabInstance:
       propertyPath: m_Name
       value: SideBars
       objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 723.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 28.089966
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476511881522989806, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.4799805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 718
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 6055356514149954710, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 123
+      objectReference: {fileID: 0}
     - target: {fileID: 8534242514109479059, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1835942621}
+    - target: {fileID: 9213967401822860283, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 142691e1354044e4bb0f64816dbd4c87, type: 3}
+    - target: {fileID: 9213967401822860283, guid: 86f5d4feb937a974e825d3008933122c, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
