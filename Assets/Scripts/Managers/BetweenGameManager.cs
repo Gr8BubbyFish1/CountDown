@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class BetweenGameManager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class BetweenGameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI notification;
     
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private PlayableDirector fadeOut;
     private void Start()
     {
         //StaticManager.betweenGameManager = this;
@@ -20,10 +23,22 @@ public class BetweenGameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && !StaticManager.transitionPlaying)
         {
-            StaticManager.StartNextGame();
+            StartCoroutine(TransitionOut());
         }
+    }
+
+    private IEnumerator TransitionOut()
+    {
+        StaticManager.transitionPlaying = true;
+        
+        fadeOut.Play();
+        while (fadeOut.time < fadeOut.duration)
+            yield return null;
+
+        StaticManager.transitionPlaying = false;
+        StaticManager.StartNextGame();
     }
 
     public void UpdateText()
