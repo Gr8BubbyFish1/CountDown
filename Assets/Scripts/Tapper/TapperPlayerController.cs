@@ -38,7 +38,7 @@ public class TapperPlayerController : MonoBehaviour
     {
         InputAction.FindActionMap("Tapper").Enable();
         
-        moveAction = InputAction.FindAction("Move");
+        moveAction = InputAction.FindAction("MoveBartender");
         fillAction = InputAction.FindAction("FillOrServe");
         
         fillTimer = fillDuration;

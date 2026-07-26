@@ -7,8 +7,8 @@ public class RiceManager : MonoBehaviour
     [SerializeField] private Vector2 spawnAreaCenter;
     [SerializeField] private Vector2 spawnAreaSize;
 
-    [SerializeField] private int riceCountMean;
-    [SerializeField] private int riceCountStd;
+    private int riceCountMean;
+    private float riceCountStd;
     private int riceCountMax = 50;
     private int riceCountMin = 5;
     private int riceCount;
@@ -32,34 +32,7 @@ public class RiceManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        /*
-        switch (StaticManager.totalRoundsPlayed){
-            case 0:
-                riceCountMean = 10;
-                riceCountStd = 1;
-                TIMER = 10;
-                break;
-            case 1:
-                riceCountMean = 15;
-                riceCountStd = 1;
-                TIMER = 10;
-                break;
-            case 2:
-                riceCountMean = 20;
-                riceCountStd = 2;
-                TIMER = 10;
-                break;
-            case 3:
-                riceCountMean = 25;
-                riceCountStd = 2;
-                TIMER = 10;
-                break;
-            default:
-                riceCountMean = 40;
-                riceCountStd = 3;
-                TIMER = 10;
-                break;
-        }*/
+        DifficultySelect(StaticManager.totalRoundsPlayed);
 
         riceEnd = false;
         riceCount = GetRandomNormal(riceCountMean, riceCountStd, riceCountMin, riceCountMax);
@@ -203,5 +176,37 @@ public class RiceManager : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(spawnAreaCenter + spawnAreaSize / 4, new Vector2(minDistance, minDistance));
+    }
+
+    private void DifficultySelect(int difficulty)
+    {
+        switch (difficulty)
+        {
+            case 0:
+                riceCountMean = 10;
+                riceCountStd = 1f;
+                StaticManager.setTimer(15);
+                break;
+            case 1:
+                riceCountMean = 15;
+                riceCountStd = 1.5f;
+                StaticManager.setTimer(13);
+                break;
+            case 2:
+                riceCountMean = 20;
+                riceCountStd = 2f;
+                StaticManager.setTimer(12);
+                break;
+            case 3:
+                riceCountMean = 25;
+                riceCountStd = 2f;
+                StaticManager.setTimer(11);
+                break;
+            default:
+                riceCountMean = 25;
+                riceCountStd = 2.5f;
+                StaticManager.setTimer(10);
+                break;
+        }
     }
 }
