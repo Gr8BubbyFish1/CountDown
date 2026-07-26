@@ -114,7 +114,6 @@ public static class StaticManager
             if (roundNumber == 6)
             {
                 totalRoundsPlayed++;
-                audioManager.PlaySFX(audioManager.speedUp);
                 notificationNote = "Challenge Increasing...";
                 roundNumber = 1;
             }
