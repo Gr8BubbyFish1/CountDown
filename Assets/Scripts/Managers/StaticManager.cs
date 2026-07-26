@@ -32,7 +32,7 @@ public static class StaticManager
      */
     
     //Multi run stats
-    public static int highScore;
+    public static int highScore = 0;
     
     //Between minigame report
     public static int totalGamesPlayed;
@@ -156,6 +156,10 @@ public static class StaticManager
     {
         try
         {
+            if(totalGamesPlayed > highScore)
+            {
+                highScore = totalGamesPlayed;
+            }
             audioManager.PlaySFX(audioManager.gameOver);
             transitionManager.CloseScene("Title Screen");
         }

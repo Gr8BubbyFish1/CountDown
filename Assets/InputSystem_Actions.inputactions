@@ -997,7 +997,7 @@
             "id": "8affa953-2a67-4ab8-86ca-123cd34debcd",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "MoveBartender",
                     "type": "Value",
                     "id": "0cbe4976-7d7b-4a8e-85a1-dbf5110d13c5",
                     "expectedControlType": "Axis",
@@ -1023,7 +1023,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad;Joystick",
-                    "action": "Move",
+                    "action": "MoveBartender",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1034,7 +1034,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoveBartender",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -1045,7 +1045,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveBartender",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -1056,7 +1056,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Move",
+                    "action": "MoveBartender",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
