@@ -14,7 +14,7 @@ public class FeedController : MonoBehaviour
     [SerializeField] private GameObject[] SpeechBubble;
     [SerializeField] private Vector2[] RequestLocations;
 
-    [SerializeField] private float startingDelay;
+    [SerializeField] public float startingDelay;
     [SerializeField] private float speedUpRate = 0.1f;
     
     private void Start()

@@ -21,7 +21,7 @@ public class RiceManager : MonoBehaviour
     private List<int> answerChoices = new();
     [SerializeField] private AnswerButton[] answerButtons;
 
-    private bool loseRice = false;
+    private bool riceEnd;
     private AudioManager audioManager;
 
     private void Awake()
@@ -32,6 +32,36 @@ public class RiceManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        /*
+        switch (StaticManager.totalRoundsPlayed){
+            case 0:
+                riceCountMean = 10;
+                riceCountStd = 1;
+                TIMER = 10;
+                break;
+            case 1:
+                riceCountMean = 15;
+                riceCountStd = 1;
+                TIMER = 10;
+                break;
+            case 2:
+                riceCountMean = 20;
+                riceCountStd = 2;
+                TIMER = 10;
+                break;
+            case 3:
+                riceCountMean = 25;
+                riceCountStd = 2;
+                TIMER = 10;
+                break;
+            default:
+                riceCountMean = 40;
+                riceCountStd = 3;
+                TIMER = 10;
+                break;
+        }*/
+
+        riceEnd = false;
         riceCount = GetRandomNormal(riceCountMean, riceCountStd, riceCountMin, riceCountMax);
 
         ricePositions.Clear();
@@ -99,9 +129,9 @@ public class RiceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (StaticManager.hasTimeRunOut() && !loseRice)
+        if (StaticManager.hasTimeRunOut() && !riceEnd)
         {
-            loseRice = true;
+            riceEnd = true;
             Debug.Log("Time up");
             StaticManager.removeLife();
             StaticManager.EndMiniGame();
@@ -148,17 +178,19 @@ public class RiceManager : MonoBehaviour
 
     public void SubmitAnswer(int guess)
     {
-        if (guess == correctCount)
+        if (guess == correctCount && !riceEnd)
         {
             //Debug.Log("Correct!");
             // Win
+            riceEnd = true;
             audioManager.PlaySFX(audioManager.winSFX);
             StaticManager.EndMiniGame();
         }
-        else
+        else if (!riceEnd)
         {
             //Debug.Log("Wrong!");
             // Lose
+            riceEnd = true;
             StaticManager.removeLife();
             StaticManager.EndMiniGame();
         }
