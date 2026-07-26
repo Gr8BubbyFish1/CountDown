@@ -191,6 +191,7 @@ public static class StaticManager
 
     public static void setTimer(float time)
     {
+        //Debug.Log("TimerFireB");
         sideBarsManager.setMaxTime(time);
     }
 
