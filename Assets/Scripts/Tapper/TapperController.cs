@@ -20,7 +20,9 @@ public class TapperController : MonoBehaviour
 
     [SerializeField] private float totalServings;
     // [SerializeField] private GameObject[] lane; // I don't think I ever use this? why is this here?
-    
+
+    private bool endTapper;
+
     [SerializeField] private TextMeshProUGUI ScoreText;
     private AudioManager audioManager;
 
@@ -31,6 +33,7 @@ public class TapperController : MonoBehaviour
 
     private void Start()
     {
+        endTapper = false;
         DifficultySelect(StaticManager.totalRoundsPlayed);
         
         List<Blood> bloodFeed = new List<Blood>();
@@ -49,8 +52,8 @@ public class TapperController : MonoBehaviour
         //This is terrible practice, but I have mangled this minigame's code enough to go back now. 
         ScoreText.text = $"Served:\n {totalServings - feedController.bloodFeed.Count}/{totalServings}";
 
-        if(StaticManager.hasTimeRunOut())
-            LoseLife();
+        if (StaticManager.hasTimeRunOut() && !endTapper)    
+            LoseLife(); 
     }
 
     public void ServeMug(Blood currentBelt, Blood? mug)
@@ -72,7 +75,8 @@ public class TapperController : MonoBehaviour
     }
 
     public void LoseLife()
-    { 
+    {
+        endTapper = true;
         StaticManager.removeLife();
         StaticManager.EndMiniGame();
         Debug.Log("Damn man you fucking suck");
@@ -81,6 +85,7 @@ public class TapperController : MonoBehaviour
     public void GameWon()
     {
         Debug.Log("congarts champ");
+        endTapper = true;
         audioManager.PlaySFX(audioManager.winSFX);
         StaticManager.EndMiniGame();
     }

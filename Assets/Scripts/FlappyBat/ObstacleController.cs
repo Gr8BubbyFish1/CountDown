@@ -51,7 +51,6 @@ public class ObstacleController : MonoBehaviour
         obstacleHeight = obstacleInitializer.GetComponent<Collider2D>().bounds.size.y;
         Destroy(obstacleInitializer);
 
-
         if (speed > 5)
         {
             tightness = 2.5f - Mathf.Sqrt(speed - 5);
@@ -117,7 +116,7 @@ public class ObstacleController : MonoBehaviour
         scoreText.text = $"Stakes:\n{currentScore}/{goalScore}";
         Debug.Log($"Current score: {currentScore}");
 
-        if (currentScore >= goalScore)
+        if (currentScore >= goalScore && !gameEnding)
         {
             Debug.Log($"YOU WIN!!!!");
             gameEnding = true;
