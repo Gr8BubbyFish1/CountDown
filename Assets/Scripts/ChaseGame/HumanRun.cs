@@ -25,6 +25,7 @@ public class HumanRun : MonoBehaviour
 
     void Start()
     {
+        SetDifficulty();
         PickNewTarget();
         health = maxHealth;
     }
@@ -98,5 +99,56 @@ public class HumanRun : MonoBehaviour
         skin.color = skintone;
         yield return new WaitForSeconds(invincibleTime);
         invincible = false;
+    }
+
+    private void SetDifficulty()
+    {
+        int roundNumber = StaticManager.totalRoundsPlayed;
+        PlayerMove playerMove = player.GetComponent<PlayerMove>();
+        maxHealth = 15;
+        
+        switch (roundNumber)
+        {
+            case 0:
+                speed = 4;
+                playerMove.SetPlayerSpeed(5f);
+                StaticManager.setTimer(30);
+                break;
+            case 1:
+                speed = 5;
+                playerMove.SetPlayerSpeed(5f);
+                StaticManager.setTimer(25);
+                break;
+            case 2:
+                speed = 5;
+                playerMove.SetPlayerSpeed(6f);
+                StaticManager.setTimer(20);
+                break;
+            case 3:
+                speed = 6;
+                playerMove.SetPlayerSpeed(6f);
+                StaticManager.setTimer(25);
+                break;
+            case 4:
+                speed = 6;
+                playerMove.SetPlayerSpeed(7f);
+                StaticManager.setTimer(20);
+                break;
+            case 5:
+                speed = 7;
+                playerMove.SetPlayerSpeed(8f);
+                StaticManager.setTimer(20);
+                break;
+            case 6:
+                speed = 8;
+                playerMove.SetPlayerSpeed(8f);
+                StaticManager.setTimer(20);
+                break;
+            default:
+                speed = 8;
+                playerMove.SetPlayerSpeed(8f);
+                StaticManager.setTimer(15);
+                break;
+        }
     }
 }
