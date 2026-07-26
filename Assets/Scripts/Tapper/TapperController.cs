@@ -46,6 +46,9 @@ public class TapperController : MonoBehaviour
     {
         //This is terrible practice, but I have mangled this minigame's code enough to go back now. 
         ScoreText.text = $"Served:\n {totalServings - feedController.bloodFeed.Count}/{totalServings}";
+
+        if(StaticManager.hasTimeRunOut())
+            LoseLife();
     }
 
     public void ServeMug(Blood currentBelt, Blood? mug)
