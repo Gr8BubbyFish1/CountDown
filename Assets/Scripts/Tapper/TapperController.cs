@@ -31,6 +31,8 @@ public class TapperController : MonoBehaviour
 
     private void Start()
     {
+        DifficultySelect(StaticManager.totalRoundsPlayed);
+        
         List<Blood> bloodFeed = new List<Blood>();
         for (int i = 0; i < totalServings; i++)
         {
@@ -81,5 +83,34 @@ public class TapperController : MonoBehaviour
         Debug.Log("congarts champ");
         audioManager.PlaySFX(audioManager.winSFX);
         StaticManager.EndMiniGame();
+    }
+
+    private void DifficultySelect(int difficulty)
+    {
+        switch (difficulty)
+        {
+            case 0:
+                totalServings = 8;
+                break;
+            case 1:
+                totalServings = 10;
+                break;
+            case 2:
+                totalServings = 14;
+                feedController.startingDelay = 2;
+                break;
+            case 3:
+                totalServings = 18;
+                feedController.startingDelay = 2;
+                break;
+            case 4:
+                totalServings = 20;
+                feedController.startingDelay = 1.5f;
+                break;
+            default:
+                totalServings = 20 + (difficulty - 5) * 5;
+                feedController.startingDelay = 1f;
+                break;
+        }
     }
 }

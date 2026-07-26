@@ -41,6 +41,7 @@ public class ObstacleController : MonoBehaviour
     private Tuple<float, float> reachableBoundsHolder =  new Tuple<float, float>(5f, -5f);
     void Start()
     {
+        DifficultySelect(StaticManager.totalRoundsPlayed);
         spawnDelay = horizontalGap / speed;
         Debug.Log("SpawnDelay set to be " + spawnDelay + " seconds. I sure hope that the units are right");
         
@@ -133,6 +134,45 @@ public class ObstacleController : MonoBehaviour
             Debug.Log("You hit the obstacle!");
             StaticManager.removeLife();
             StaticManager.EndMiniGame();
+        }
+    }
+    
+    private void DifficultySelect(int difficulty)
+    {
+        switch (difficulty)
+        {
+            case 0:
+                goalScore = 10;
+                break;
+            case 1:
+                goalScore = 12;
+                horizontalGap = 3.5f;
+                verticalGap = 5.5f;
+                break;
+            case 2:
+                goalScore = 15;
+                horizontalGap = 3.5f;
+                verticalGap = 5.5f;
+                speed = 8;
+                break;
+            case 3:
+                goalScore = 18;
+                horizontalGap = 3.5f;
+                verticalGap = 5f;
+                speed = 10;
+                break;
+            case 4:
+                goalScore = 25;
+                horizontalGap = 2.0f;
+                verticalGap = 4f;
+                speed = 15;
+                break;
+            default:
+                goalScore = 25 + (difficulty - 5) * 5;
+                horizontalGap = 2.0f;
+                verticalGap = 3.5f;
+                speed = 20;
+                break;
         }
     }
 
