@@ -13,5 +13,10 @@ public class PlayerMove : MonoBehaviour
         movement.Set(PlayerManager.Movement.x, PlayerManager.Movement.y);
 
         rb.linearVelocity = movement * playerSpeed;
+        
+        if (movement.sqrMagnitude > 0.001f)
+        {
+            transform.up = movement.normalized;
+        }
     }
 }
