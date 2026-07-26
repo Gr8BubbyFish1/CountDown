@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +17,7 @@ public class TapperPlayerController : MonoBehaviour
     private float fillTimer;
     
     [SerializeField] private GameObject[] ActiveBelts;
+    [SerializeField] private Vector2[] BeltLocations;
 
     private AudioSource playerSFX;
     [SerializeField] private AudioClip fillingSFX;
@@ -23,7 +26,13 @@ public class TapperPlayerController : MonoBehaviour
     bool playedFullSFX = false;
 
     
-    private TapperController.Blood playerPosition = TapperController.Blood.Platelets;
+    private TapperController.Blood playerPosition = TapperController.Blood.O;
+    private TapperController.Blood? currentMug;
+    
+    
+    private SpriteRenderer sr;
+    [SerializeField] private Sprite moveSprite;
+    [SerializeField] private Sprite stillSprite;
 
     void Start()
     {
@@ -36,6 +45,8 @@ public class TapperPlayerController : MonoBehaviour
         
         playerSFX = GetComponent<AudioSource>();
         playerSFX.clip = fillingSFX;
+        
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -47,7 +58,7 @@ public class TapperPlayerController : MonoBehaviour
 
         if (fillAction.IsPressed())
         {
-            //SPRITE - set filling
+            sr.sprite = stillSprite;
             if (fillTimer > 0)
             {
                 fillTimer -= Time.deltaTime;
@@ -56,6 +67,7 @@ public class TapperPlayerController : MonoBehaviour
                     playerSFX.Play();
                     playedFillingSFX = true;
                 }
+                sr.flipX = true; //while filling, face the spout
             }
             else
             {
@@ -68,7 +80,10 @@ public class TapperPlayerController : MonoBehaviour
                 {
                     playedFullSFX = true;
                     playerSFX.PlayOneShot(fullSFX);
+                    currentMug = playerPosition;
                 }
+                
+                sr.flipX = false; //face the customer
             }
         }
         else
@@ -79,7 +94,8 @@ public class TapperPlayerController : MonoBehaviour
             playedFullSFX = false;
             if (fillTimer < 0)
             {
-                tapperController.ServeMug(playerPosition);
+                tapperController.ServeMug(playerPosition, currentMug);
+                currentMug = null;
             }
             fillTimer = fillDuration;
         }
@@ -92,6 +108,24 @@ public class TapperPlayerController : MonoBehaviour
             ((int)playerPosition + (int)change + ActiveBelts.Length) % ActiveBelts.Length 
             );
         //convert it to a vector so the character moves where he supposed to
-        gameObject.transform.position = new Vector2(gameObject.transform.position.x, ActiveBelts[(int)playerPosition].transform.position.y);
+        gameObject.transform.position = BeltLocations[(int)playerPosition];
+
+        StartCoroutine(step());
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        foreach (Vector2 belt in BeltLocations)
+        {
+            Gizmos.DrawWireCube(belt, new Vector3(1, 1, 1));
+        }
+    }
+    
+    IEnumerator step()
+    {
+        sr.sprite = moveSprite;
+        yield return new WaitForSeconds(0.1f);
+        sr.sprite = stillSprite;
     }
 }

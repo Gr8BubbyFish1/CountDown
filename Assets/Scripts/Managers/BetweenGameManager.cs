@@ -10,6 +10,8 @@ public class BetweenGameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currentRound;
     [SerializeField] private TextMeshProUGUI lives;
     [SerializeField] private TextMeshProUGUI notification;
+    
+    [SerializeField] private AudioManager audioManager;
     private void Start()
     {
         //StaticManager.betweenGameManager = this;
@@ -31,5 +33,10 @@ public class BetweenGameManager : MonoBehaviour
         currentRound.text = "Round " + StaticManager.roundNumber + " / 5";
         lives.text = "Lives Remaining: " + StaticManager.lives;
         notification.text = StaticManager.notificationNote;
+        if (notification.text.Equals("Challenge Increasing..."))
+        {
+            audioManager = StaticManager.audioManager;
+            audioManager.PlaySFX(audioManager.speedUp);
+        }
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dbd886e81aa8a164094a36be5786442f
+guid: 16f0fe985e2960c4fb453b6c30b3163a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6550316265939647703
-    second: plasma bag_0
+      213: -4860332235465729306
+    second: speech-bubble-A_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plasma bag_0
+      name: speech-bubble-A_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 0
-        width: 47
-        height: 63
+        x: 9
+        y: 19
+        width: 292
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7dcbbc550f567ea50800000000000000
-      internalID: 6550316265939647703
+      spriteID: 6ea5fae3591ac8cb0800000000000000
+      internalID: -4860332235465729306
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      plasma bag_0: 6550316265939647703
+      speech-bubble-A_0: -4860332235465729306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
