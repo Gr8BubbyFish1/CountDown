@@ -76,18 +76,24 @@ public class TapperController : MonoBehaviour
 
     public void LoseLife()
     {
-        endTapper = true;
-        StaticManager.removeLife();
-        StaticManager.EndMiniGame();
-        Debug.Log("Damn man you fucking suck");
+        if (!endTapper)
+        {
+            endTapper = true;
+            StaticManager.removeLife();
+            StaticManager.EndMiniGame();
+            Debug.Log("Damn man you fucking suck");
+        }
     }
 
     public void GameWon()
     {
-        Debug.Log("congarts champ");
-        endTapper = true;
-        audioManager.PlaySFX(audioManager.winSFX);
-        StaticManager.EndMiniGame();
+        if (!endTapper)
+        {
+            Debug.Log("congarts champ");
+            endTapper = true;
+            audioManager.PlaySFX(audioManager.winSFX);
+            StaticManager.EndMiniGame();
+        }
     }
 
     private void DifficultySelect(int difficulty)
