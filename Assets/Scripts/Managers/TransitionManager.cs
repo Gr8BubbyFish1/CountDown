@@ -12,9 +12,13 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI splashTitle;
     public String splashTitleText;
 
-    private void Start()
+    private void Awake()
     {
         StaticManager.transitionManager = this;
+    }
+
+    private void Start()
+    {
         splashTitle.text = splashTitleText;
 
         if (StaticManager.skipNextIntro)

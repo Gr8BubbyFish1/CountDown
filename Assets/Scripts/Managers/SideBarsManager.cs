@@ -7,9 +7,14 @@ public class SideBarsManager : MonoBehaviour
     [SerializeField] private Timer timer;
     [SerializeField] private TextMeshProUGUI round;
     [SerializeField] private TextMeshProUGUI lives;
-    private void Start()
+    
+    private void Awake()
     {
         StaticManager.sideBarsManager = this;
+    }
+
+    private void Start()
+    {
         UpdateSideBars();
     }
 
@@ -21,6 +26,7 @@ public class SideBarsManager : MonoBehaviour
 
     public void setMaxTime(float time)
     {
+        //Debug.Log("TimerFireC");
         timer.startTime = time;
     }
 
