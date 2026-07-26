@@ -1150,7 +1150,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1839171792909526237, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: splashTitleText
-      value: Close the blinds
+      value: Close the Blinds
       objectReference: {fileID: 0}
     - target: {fileID: 4812904544581171512, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: m_Name

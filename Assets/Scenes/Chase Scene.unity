@@ -2040,7 +2040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1839171792909526237, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: splashTitleText
-      value: Chase The Human
+      value: Chase the Human
       objectReference: {fileID: 0}
     - target: {fileID: 3894458677425026546, guid: 9724aa17b1ae0e4498fd6a17a0ebe4bc, type: 3}
       propertyPath: m_AnchoredPosition.y
